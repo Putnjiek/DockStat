@@ -30,6 +30,8 @@ It shows usage statistics like CPU, RAM and Network usage.
 
 ## Installation using Docker:
 
+### ❗ Please see the [DockStatAPI](https://github.com/Its4Nik/dockstatapi) documentation for more information.
+
 ```yaml
 name: DockStat
 services:
