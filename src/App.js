@@ -4,17 +4,34 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const apihost = process.env.REACT_APP_API_URL;
-const default_theme = process.env.REACT_APP_DEFAULT_THEME;
-const key = process.env.REACT_APP_SECRET;
-
 function App() {
     const [data, setData] = useState({});
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [intervalTime, setIntervalTime] = useState(5000);
-    const [theme, setTheme] = useState(default_theme);
+    const [theme, setTheme] = useState('');
     const [loadingTheme, setLoadingTheme] = useState(false);
+    const [apihost, setApihost] = useState('');
+    const [key, setKey] = useState('');
 
+    // Fetch configuration from config.json
+    useEffect(() => {
+        const fetchConfig = async () => {
+            try {
+                const response = await fetch('/config.json');
+                const configData = await response.json();
+                setApihost(configData.API_URL);
+                setKey(configData.SECRET);
+                setTheme(configData.DEFAULT_THEME);
+            } catch (error) {
+                console.error('Error loading configuration:', error);
+                toast.error('Failed to load configuration.');
+            }
+        };
+
+        fetchConfig();
+    }, []);
+
+    // Fetch data from API
     const fetchData = async () => {
         try {
             const response = await fetch(`${apihost}/stats`, {
@@ -40,10 +57,12 @@ function App() {
     };
 
     useEffect(() => {
-        fetchData();
-        const interval = setInterval(fetchData, intervalTime);
-        return () => clearInterval(interval);
-    }, [intervalTime]);
+        if (apihost && key) {
+            fetchData();
+            const interval = setInterval(fetchData, intervalTime);
+            return () => clearInterval(interval);
+        }
+    }, [apihost, key, intervalTime]);
 
     useEffect(() => {
         setLoadingTheme(true);
