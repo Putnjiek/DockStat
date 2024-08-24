@@ -16,18 +16,20 @@ It shows usage statistics like CPU, RAM and Nwtwork usage.
 ```yaml
 name: DockStat
 services:
-  dockstat:
-    image: ghcr.io/its4nik/dockstat:latest
-    container_name: dockstat
-    ports:
-        - "4444:3000"
-    environment:
-        API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
-        DEFAULT_THEME="dracula"
-    voumes:
-        - ./dockstat/icons:/app/build/icons
-    restart: always
+    # Frontend
+    dockstat:
+        image: ghcr.io/its4nik/dockstat:latest
+        container_name: dockstat
+        ports:
+            - "4444:3000"
+        environment:
+            API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
+            DEFAULT_THEME="dracula"
+        volumes:
+            - ./dockstat/icons:/app/build/icons
+        restart: always
 
+    # API:
     dockstatapi:
         image: ghcr.io/its4nik/dockstatapi:latest
         container_name: dockstatapi
@@ -45,6 +47,10 @@ DEFAULT_THEME="dracula" # => You can specify the default theme to use here. (daf
 ```
 
 ---
+
+### ❗❗❗ THIS CONFIGURATION IS FOR THE API
+
+Please place this file inside the mounted directory for `/api/config`.
 
 Example for the host.yaml file:
 ```yaml
@@ -126,7 +132,7 @@ container:
 
 1. Theme switching only works once to the selected theme, you cant change back (yet). See the code logic here:
 
-```react
+```javascript
 // App.js - Line 42 -> 51
 
 useEffect(() => {
