@@ -12,8 +12,9 @@ RUN npm i --force && \
 WORKDIR /app
 
 RUN mv /build/build /app && \
+    mv /build/entrypoint.sh /app && \
     rm -rf /build
 
 EXPOSE 3000
 
-ENTRYPOINT [ "bash", "entrypoint.sh" ]
+ENTRYPOINT [ "bash", "/app/entrypoint.sh" ]
