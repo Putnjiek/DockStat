@@ -42,8 +42,8 @@ services:
         ports:
             - "4444:3000"
         environment:
-            API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
-            DEFAULT_THEME="dracula"
+            - API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
+            - DEFAULT_THEME="dracula"
         volumes:
             - ./dockstat/icons:/app/build/icons
         restart: always
