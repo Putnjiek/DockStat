@@ -7,10 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const apihost = process.env.API_URL;
 const default_theme = process.env.DEFAULT_THEME || 'dracula';
 
-if (!apihost) {
-    return 'Please enter the "API_HOST" inside the docker-compose file'
-}
-
 function App() {
     const [data, setData] = useState({});
     const [isInitialLoad, setIsInitialLoad] = useState(true);
