@@ -4,7 +4,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const apihost = process.env.API_URL;
+const apihost = process.env.API_URL || 'http://localhost:7070';
 const default_theme = process.env.DEFAULT_THEME || 'dracula';
 
 function App() {

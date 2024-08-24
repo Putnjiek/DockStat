@@ -135,11 +135,8 @@
     position: absolute;
     bottom: 8px;
     right: 8px;
-    width: 80px;
-    /* Adjust size as needed */
-    height: 80px;
-    /* Ensures 1:1 aspect ratio */
-    object-fit: cover;
+    height: 5rem;
+    object-fit: fill;
     /* Ensures image covers the box */
     border-radius: 4px;
     /* Optional: adds rounded corners */

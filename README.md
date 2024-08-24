@@ -2,11 +2,11 @@
 
 Dockstat is a monitoring frontend powered by the [DockStatAPI](https://github.com/Its4Nik/dockstatapi).
 
-It shows usage statistics like CPU, RAM and Nwtwork usage.
+It shows usage statistics like CPU, RAM and Network usage.
 
 ## WORK IN PROGRESS
 
-- Custom Container Logos
+- Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
 - Custom Themes
 - New UI
 - More advanced sub pages.
