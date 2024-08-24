@@ -14,9 +14,9 @@ touch /app/build/config.json
 
 echo "
 {
-    \"API_URL\": \"${API_URL}\",
-    \"DEFAULT_THEME\": \"${DEFAULT_THEME}\",
-    \"SECRET\": \"${SECRET}\"
+    \"API_URL\": ${API_URL},
+    \"DEFAULT_THEME\": ${DEFAULT_THEME},
+    \"SECRET\": ${SECRET}
 }
 " > /app/build/config.json
 
