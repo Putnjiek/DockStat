@@ -10,7 +10,7 @@ echo "DEFAULT_THEME: ${DEFAULT_THEME}"
 echo "SECRET:        ${SECRET}"
 echo "============ DockStat ============"
 
-touch /app/public/config.json
+touch /app/build/config.json
 
 echo "
 {
@@ -18,6 +18,6 @@ echo "
     \"DEFAULT_THEME\": \"${DEFAULT_THEME}\",
     \"SECRET\": \"${SECRET}\"
 }
-" > /app/public/config.json
+" > /app/build/config.json
 
 exec serve -s build
