@@ -5,12 +5,13 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const apihost = process.env.API_URL;
+const default_theme = process.env.DEFAULT_THEME || 'dracula';
 
 function App() {
     const [data, setData] = useState({});
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [intervalTime, setIntervalTime] = useState(5000);
-    const [theme, setTheme] = useState('dracula');
+    const [theme, setTheme] = useState(default_theme);
     const [loadingTheme, setLoadingTheme] = useState(false);
 
     const fetchData = async () => {

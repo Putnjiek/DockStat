@@ -93,15 +93,3 @@ select {
 .container-bubble {
     position: relative;
 }
-
-img {
-    filter: invert(100%) sepia(10%) saturate(384%) hue-rotate(341deg) brightness(101%) contrast(94%);
-}
-
-.container-buttons {
-    color: var(--network-dark)
-}
-
-.container-buttons:hover {
-    color: var(--network-light);
-}
