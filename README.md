@@ -35,7 +35,7 @@ services:
     image: ghcr.io/its4nik/dockstatapi:latest
     container_name: dockstatapi
     environment:
-      - SECRET="CHANGEME" # This is required in the header 'Authorization': 'CHANGEME'
+      - SECRET=CHANGEME # This is required in the header 'Authorization': 'CHANGEME'
     ports:
       - "7070:7070"
     volumes:
