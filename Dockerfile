@@ -4,7 +4,7 @@ WORKDIR /build
 
 COPY . /build
 
-RUN npm i && \
+RUN npm i --force && \
     npm run build
 
 FROM build as production
