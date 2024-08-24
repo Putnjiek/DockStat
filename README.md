@@ -4,23 +4,6 @@ Dockstat is a monitoring frontend powered by the [DockStatAPI](https://github.co
 
 It shows usage statistics like CPU, RAM and Network usage.
 
-## Screenshots:
-
-### Dracula theme:
-![Dracula](https://github.com/user-attachments/assets/a1790673-c724-4fac-80eb-cdb30a542646)
-
-### Nord Theme:
-![Nord](https://github.com/user-attachments/assets/3eb14ded-087b-40cc-b07f-282fd3d60ea7)
-
-### Light theme:
-![Light](https://github.com/user-attachments/assets/ea2412fa-52fb-4f81-a2e7-713f298b6a4a)
-
-### Collapsed Content:
-![Collapsed](https://github.com/user-attachments/assets/6141d48a-6d7a-4d0b-943d-68263dec7db4)
-
-### Link and Logo showcase
-![Link and Logo](https://github.com/user-attachments/assets/2bfae532-f8a4-41a2-8eac-bf8aebc59474)
-
 ## WORK IN PROGRESS
 
 - Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
@@ -30,40 +13,44 @@ It shows usage statistics like CPU, RAM and Network usage.
 
 ## Installation using Docker:
 
-### ❗ Please see the [DockStatAPI](https://github.com/Its4Nik/dockstatapi) documentation for more information.
-
 ```yaml
 name: DockStat
 services:
-    # Frontend
-    dockstat:
-        image: ghcr.io/its4nik/dockstat:latest
-        container_name: dockstat
-        ports:
-            - "4444:3000"
-        environment:
-            - API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
-            - DEFAULT_THEME="dracula"
-        volumes:
-            - ./dockstat/icons:/app/build/icons
-        restart: always
+  # Frontend
+  dockstat:
+    image: ghcr.io/its4nik/dockstat:latest
+    container_name: dockstat
+    ports:
+      - "4444:3000"
+    environment:
+      API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
+      DEFAULT_THEME="dracula"
+      SECRET="CHANGME"
+    volumes:
+      - ./dockstat/icons:/app/build/icons
+    restart: always
 
     # API:
-    dockstatapi:
-        image: ghcr.io/its4nik/dockstatapi:latest
-        container_name: dockstatapi
-        ports:
-            - "7070:7070"
-        volumes:
-            - ./dockstatapi:/api/config # Place your hosts.yaml file here
-        restart: always
+  dockstatapi:
+    image: ghcr.io/its4nik/dockstatapi:latest
+    container_name: dockstatapi
+    environment:
+      - SECRET="CHANGEME" # This is required in the header 'Authorization': 'CHANGEME'
+    ports:
+      - "7070:7070"
+    volumes:
+      - ./dockstatapi:/api/config # Place your hosts.yaml file here
+    restart: always
 ```
 
 Environment Variables:
 ```yaml
 API_URL="http://localhost:7070" # => The url of the API endpoint
 DEFAULT_THEME="dracula" # => You can specify the default theme to use here. (dafaults to "dracula")
+SECRET="CHANGEME" # => Please set the same key as specified in the dockstatapi
 ```
+
+ℹ️ Please use HTTPS to fetch data from the API
 
 ---
 

@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const apihost = process.env.API_URL;
 const default_theme = process.env.DEFAULT_THEME || 'dracula';
+const key = process.env.SECRET;
 
 function App() {
     const [data, setData] = useState({});
@@ -16,7 +17,12 @@ function App() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`${apihost}/stats`);
+            const response = await fetch(`${apihost}/stats`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `${key}`
+                }
+            });
             if (!response.ok) throw new Error('Failed to fetch data');
             const result = await response.json();
 
