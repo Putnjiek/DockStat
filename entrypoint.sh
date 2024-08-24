@@ -16,6 +16,6 @@ echo "
     \"DEFAULT_THEME\": \"${DEFAULT_THEME}\",
     \"SECRET\": \"${SECRET}\"
 }
-" > /build/public/config.json
+" > /app/public/config.json
 
 exec serve -s build

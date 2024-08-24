@@ -16,7 +16,6 @@ COPY . /build
 # Install dependencies and build the React app
 RUN npm install --force && \
     npm run build && \
-    npm install -g serve && \
     chmod +x /build/entrypoint.sh
 
 # Final stage
@@ -27,6 +26,8 @@ WORKDIR /app
 # Copy build artifacts and entrypoint script from the build stage
 COPY --from=build /build/build /app
 COPY --from=build /build/entrypoint.sh /app
+
+RUN npm install -g serve
 
 EXPOSE 3000
 
