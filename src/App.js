@@ -4,10 +4,15 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const apihost = process.env.API_URL || 'http://localhost:7070';
+const apihost = process.env.API_URL;
 const default_theme = process.env.DEFAULT_THEME || 'dracula';
 
 function App() {
+
+    if (!apihost) {
+        return 'Please enter the "API_HOST" inside the docker-compose file'
+    }
+
     const [data, setData] = useState({});
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [intervalTime, setIntervalTime] = useState(5000);
