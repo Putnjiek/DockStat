@@ -1,4 +1,4 @@
-FROM node AS build
+FROM node AS dockstat
 
 WORKDIR /build
 
@@ -7,8 +7,6 @@ COPY . /build
 RUN npm i --force && \
     npm run build && \
     npm i -g serve
-
-FROM build as production
 
 WORKDIR /app
 
