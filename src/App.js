@@ -4,7 +4,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const apihost = 'http://localhost:7070';
+const apihost = process.env.API_URL;
 
 function App() {
     const [data, setData] = useState({});
