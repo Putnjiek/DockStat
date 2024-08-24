@@ -1,0 +1,146 @@
+.status-orb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-green {
+    background-color: #00FF00;
+    /* Green */
+}
+
+.status-orange {
+    background-color: #FFA500;
+    /* Orange */
+}
+
+.status-red {
+    background-color: #FF0000;
+    /* Red */
+}
+
+.status-grey {
+    background-color: #808080;
+    /* Grey for unknown statuses */
+}
+
+.pulse {
+    animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.network-stats {
+    display: flex;
+    align-items: center;
+}
+
+.network-stats {
+    color: #40E0D0;
+    /* Turquoise color */
+}
+
+@keyframes network-pulse {
+    0% {
+        color: #40E0D0;
+        /* Turquoise */
+    }
+
+    50% {
+        color: #008080;
+        /* Darker turquoise */
+    }
+
+    100% {
+        color: #40E0D0;
+        /* Turquoise */
+    }
+}
+
+.network-stats.pulse {
+    animation: network-pulse 1s infinite;
+}
+
+.border {
+    border: 1px solid #e2e8f0;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.ml-4 {
+    margin-left: 1rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.container-bubble {
+    position: relative;
+    overflow: hidden;
+    /* Ensure content doesn't spill outside */
+}
+
+.container-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 80px;
+    /* Adjust size as needed */
+    height: 80px;
+    /* Ensures 1:1 aspect ratio */
+    object-fit: cover;
+    /* Ensures image covers the box */
+    border-radius: 4px;
+    /* Optional: adds rounded corners */
+}
