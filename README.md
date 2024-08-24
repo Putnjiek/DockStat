@@ -1,17 +1,22 @@
-# Dockstat
+# 🐳 Dockstat
 
 Dockstat is a monitoring frontend powered by the [DockStatAPI](https://github.com/Its4Nik/dockstatapi).
 
 It shows usage statistics like CPU, RAM and Network usage.
 
-## WORK IN PROGRESS
+## 🖊️ WORK IN PROGRESS
 
+- WebUI for adding/removing hosts from the config of DockStatAPI
+- Sorting for Hosts
+- Custom host Tags like "Raspberry" or "Cloudserver"
+- Alert System using apprise or similar
+- better mobile UI
 - Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
 - Custom Themes
-- New UI
 - More advanced sub pages.
+- Exlude network mode "host" from network stats or do smth else with it (not sure yet)
 
-## Installation using Docker:
+## ⬇️ Installation using Docker:
 
 ```yaml
 name: DockStat
@@ -54,7 +59,7 @@ SECRET="CHANGEME" # => Please set the same key as specified in the dockstatapi
 
 ---
 
-### ❗❗❗ THIS CONFIGURATION IS FOR THE API
+### ❗❗❗ THIS CONFIGURATION IS FOR THE API ❗❗❗
 
 Please place this file inside the mounted directory for `/api/config`.
 
@@ -88,7 +93,7 @@ container:
 
 ---
 
-## Add quick links to containers
+## 🔗 Add quick links to containers
 
 To add quick links to your containers, marked by the chain icon on the left site of the container, you need to specify them like this inside the yaml* file:
 
@@ -104,7 +109,7 @@ Inside the container section you can specify the link of said container by refer
 
 ---
 
-## Add logos to containers
+## 🖼️ Add logos to containers
 
 To add a logo to a container you can reference the logo file like this inside the yaml* file:
 
@@ -118,7 +123,7 @@ container:
 
 Be sure to mount the path `/app/build/icons` from the docker container and to populate it with your own icons.
 
-Example:
+📰 Example:
 
 > I have a Logo.png file inside the `/app/build/icons` (mounted as `./icons` on the host)
 
@@ -134,7 +139,7 @@ container:
 
 ---
 
-## Known Issues
+## 🚫 Known Issues
 
 1. Theme switching only works once to the selected theme, you cant change back (yet). See the code logic here:
 
@@ -151,7 +156,6 @@ useEffect(() => {
             import('./themes/light.css').then(() => setLoadingTheme(false));
         }
     }, [theme]);
-
 ```
 
 ---
