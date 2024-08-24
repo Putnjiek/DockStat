@@ -6,7 +6,8 @@ COPY . /build
 
 RUN npm i --force && \
     npm run build && \
-    npm i -g serve
+    npm i -g serve && \
+    chmod +x entrypoint.sh
 
 WORKDIR /app
 
@@ -15,4 +16,4 @@ RUN mv /build/build /app && \
 
 EXPOSE 3000
 
-ENTRYPOINT [ "entrypoint.sh" ]
+ENTRYPOINT [ "bash", "entrypoint.sh" ]
