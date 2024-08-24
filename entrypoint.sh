@@ -16,7 +16,7 @@ echo "
 {
     \"API_URL\": ${API_URL},
     \"DEFAULT_THEME\": ${DEFAULT_THEME},
-    \"SECRET\": \"${SECRET}\"
+    \"SECRET\": ${SECRET}
 }
 " > /app/build/config.json
 
