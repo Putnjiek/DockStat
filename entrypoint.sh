@@ -10,6 +10,8 @@ echo "DEFAULT_THEME: ${DEFAULT_THEME}"
 echo "SECRET:        ${SECRET}"
 echo "============ DockStat ============"
 
+touch /app/public/config.json
+
 echo "
 {
     \"API_URL\": \"${API_URL}\",
