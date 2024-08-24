@@ -24,7 +24,7 @@ FROM node:slim
 WORKDIR /app
 
 # Copy build artifacts and entrypoint script from the build stage
-COPY --from=build /build/build /app
+COPY --from=build /build/build /app/build
 COPY --from=build /build/entrypoint.sh /app
 
 RUN npm install -g serve
