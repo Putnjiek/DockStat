@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const apihost = process.env.REACT_APP_API_URL;
-const default_theme = process.env.REACT_APP_DEFAULT_THEME || 'dracula';
+const default_theme = process.env.REACT_APP_DEFAULT_THEME;
 const key = process.env.REACT_APP_SECRET;
 
 function App() {

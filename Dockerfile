@@ -15,4 +15,4 @@ RUN mv /build/build /app && \
 
 EXPOSE 3000
 
-ENTRYPOINT [ "serve", "-s", "build" ]
+ENTRYPOINT [ "entrypoint.sh" ]
