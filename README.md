@@ -23,9 +23,9 @@ services:
     ports:
       - "4444:3000"
     environment:
-      API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
-      DEFAULT_THEME="dracula"
-      SECRET="CHANGME"
+      - REACT_APP_API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
+      - REACT_APP_DEFAULT_THEME="dracula"
+      - REACT_APP_SECRET="CHANGME"
     volumes:
       - ./dockstat/icons:/app/build/icons
     restart: always
@@ -45,9 +45,9 @@ services:
 
 Environment Variables:
 ```yaml
-API_URL="http://localhost:7070" # => The url of the API endpoint
-DEFAULT_THEME="dracula" # => You can specify the default theme to use here. (dafaults to "dracula")
-SECRET="CHANGEME" # => Please set the same key as specified in the dockstatapi
+REACT_APP_API_URL="http://localhost:7070" # => The url of the API endpoint
+REACT_APP_DEFAULT_THEME="dracula" # => You can specify the default theme to use here. (dafaults to "dracula")
+REACT_APP_SECRET="CHANGEME" # => Please set the same key as specified in the dockstatapi
 ```
 
 ℹ️ Please use HTTPS to fetch data from the API

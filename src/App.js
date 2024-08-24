@@ -4,9 +4,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const apihost = process.env.API_URL;
-const default_theme = process.env.DEFAULT_THEME || 'dracula';
-const key = process.env.SECRET;
+const apihost = process.env.REACT_APP_API_URL;
+const default_theme = process.env.REACT_APP_DEFAULT_THEME || 'dracula';
+const key = process.env.REACT_APP_SECRET;
 
 function App() {
     const [data, setData] = useState({});
