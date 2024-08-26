@@ -4,6 +4,10 @@ Dockstat is a monitoring frontend powered by the [DockStatAPI](https://github.co
 
 It shows usage statistics like CPU, RAM and Network usage.
 
+Example Screenshot ("Night" theme):
+
+![Example, Night Theme](/docs/night.png)
+
 ## 🖊️ WORK IN PROGRESS
 
 - [X] Refactoring
@@ -114,6 +118,22 @@ Inside the container section you can specify the link of said container by refer
 ---
 
 ## 🖼️ Add logos to containers
+
+### Simple Icons:
+
+To use Simple Icons, you can just prefix the icon name with "SI:" and then it will fetch the Simple Icon from their CDN.
+
+Example:
+
+```yaml
+container:
+  redis:
+    icon: SI:redis
+```
+
+![Redis Example icon](/docs/redis.png)
+
+### Custom Logo:
 
 To add a logo to a container you can reference the logo file like this inside the yaml* file:
 
