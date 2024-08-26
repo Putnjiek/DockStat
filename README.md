@@ -144,10 +144,12 @@ container:
 ## 🚫 Known Issues
 ### Open:
 
-2. Adding the default theme will make other themes unusable due to not being able to select them.
+3. No "Known Issues" 🎉🎉🎉
 
 ---
 ### Resolved:
+
+2. Adding the default theme will make other themes unusable due to not being able to select them.
 
 1. Theme switching only works once to the selected theme, you cant change back (yet). See the code logic here:
 
