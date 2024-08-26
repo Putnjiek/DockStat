@@ -17,6 +17,7 @@ It shows usage statistics like CPU, RAM and Network usage.
 - [X] More themes
 - [ ] More advanced sub pages.
 - [ ] Exlude network mode "host" from network stats or do smth else with it (not sure yet)
+- [ ] Add "Secondary API Host" for High availability
 
 ## ⬇️ Installation using Docker:
 
