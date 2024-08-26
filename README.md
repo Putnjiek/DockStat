@@ -79,7 +79,7 @@ services:
 
 - ⚙️ LM_LOGO_COLOR: Lightmode Logo Color (as HEX)
 
-To use the original logo colors you NEED to enter "original" in both, `LM_LOGO_COLOR` and `LM_LOGO_COLOR`.
+To use the original logo colors you NEED to enter "original" in both, `LM_LOGO_COLOR` and `DM_LOGO_COLOR`.
 
 ℹ️ Please use HTTPS to fetch data from the API
 
