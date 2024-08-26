@@ -4,9 +4,9 @@ Dockstat is a monitoring frontend powered by the [DockStatAPI](https://github.co
 
 It shows usage statistics like CPU, RAM and Network usage.
 
-Example Screenshot ("Night" theme):
+![Example, Night Theme](/docs/screenshots/night.png)
 
-![Example, Night Theme](/docs/night.png)
+See more examples [here](/docs/MultipleThemes.md).
 
 ## 🖊️ WORK IN PROGRESS
 
@@ -39,6 +39,9 @@ services:
       - API_URL="http://localhost:7070" # Host of the DockStatAPI endpoint
       - DEFAULT_THEME="dracula"
       - SECRET="CHANGME"
+      - LOGO_SIZE="M"                   # Default Logo Size "M"
+      - DM_LOGO_COLOR="#FFFFFF"         # Default Dark mode logo color "#FFFFFF" (white) 
+      - LM_LOGO_COLOR="#000000"         # Default Dark mode logo color "#000000" (black)
     volumes:
       - ./dockstat/icons:/app/build/icons
     restart: always
@@ -56,12 +59,27 @@ services:
     restart: always
 ```
 
-Environment Variables:
-```yaml
-API_URL="http://localhost:7070" # => The url of the API endpoint
-DEFAULT_THEME="dracula" # => You can specify the default theme to use here. (dafaults to "dracula")
-SECRET="CHANGEME" # => Please set the same key as specified in the dockstatapi
-```
+## 🖊️ Configuration
+
+⚠️ = required
+
+⚙️ = optional
+
+---
+
+- ⚠️ API_URL: The URL of the DockStatAPI endpoint
+
+- ⚠️ SECRET: The Secret Token required fot the DockStatAPI endpoint
+
+- ⚙️ DEFAULT_THEME: default theme. Screenshots [here](/docs/MultipleThemes.md)
+
+- ⚙️ LOGO_SIZE: Logo sizes (XS, S, M, L, XL)
+
+- ⚙️ DM_LOGO_COLOR: Darkmode Logo Color (as HEX)
+
+- ⚙️ LM_LOGO_COLOR: Lightmode Logo Color (as HEX)
+
+To use the original logo colors you NEED to enter "original" in both, `LM_LOGO_COLOR` and `LM_LOGO_COLOR`.
 
 ℹ️ Please use HTTPS to fetch data from the API
 
@@ -131,7 +149,7 @@ container:
     icon: SI:redis
 ```
 
-![Redis Example icon](/docs/redis.png)
+![Redis Example icon](/docs/screenshots/redis.png)
 
 ### Custom Logo:
 
