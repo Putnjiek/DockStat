@@ -3,6 +3,7 @@ import { FaMemory, FaMicrochip, FaArrowDown, FaArrowUp, FaLink } from 'react-ico
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './ContainerStats.css';
+import './LogoSizes.css'
 
 function formatBytesToMB(bytes) {
     return (bytes / (1024 * 1024)).toFixed(2);
