@@ -5,9 +5,11 @@ import { FaClipboard, FaClipboardCheck } from "react-icons/fa";
 import './css/AdvancedStats.css';
 import './css/ModalAnimations.css';
 
-function AdvancedStats({ id, containerName, link, icon, logoSize, darkModeLogoColor, lightModeLogoColor }) {
+function AdvancedStats({ id, containerName, link, icon, logoSize, darkModeLogoColor, lightModeLogoColor, networkMode }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isClipboardChecked, setIsClipboardChecked] = useState(false);
+
+    networkMode = networkMode;
 
     const handleIconClick = () => {
         setIsModalOpen(true);
@@ -72,6 +74,11 @@ function AdvancedStats({ id, containerName, link, icon, logoSize, darkModeLogoCo
                                         'N/A'
                                     )}
                                 </p>
+                            </div>
+
+                            <div className="bg-base-200 p-2 rounded-lg shadow-md text-center">
+                                <h3 className="text-md font-semibold mb-1">Network Mode</h3>
+                                <p>{networkMode}</p>
                             </div>
 
                             <div className="bg-base-200 p-2 rounded-lg shadow-md text-center">
