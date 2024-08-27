@@ -13,7 +13,7 @@ See more examples [here](/docs/MultipleThemes.md).
 - [X] Refactoring
 - [X] Fix theme switcher
 - [ ] WebUI for adding/removing hosts from the config of DockStatAPI
-- [ ] Sorting for Hosts
+- [X] Sorting for Hosts
 - [ ] Custom host Tags like "Raspberry" or "Cloudserver"
 - [ ] Alert System using apprise or similar
 - [ ] better mobile UI
