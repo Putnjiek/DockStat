@@ -19,7 +19,7 @@ See more examples [here](/docs/MultipleThemes.md).
 - [ ] better mobile UI
 - [ ] Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
 - [X] More themes
-- [ ] More advanced sub pages.
+- [X] More advanced sub pages.
 - [ ] Exlude network mode "host" from network stats or do smth else with it (not sure yet)
 - [ ] Add "Secondary API Host" for High availability
 - [ ] Persistent choice of Theme / Refresh rate
