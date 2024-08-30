@@ -20,7 +20,7 @@ See more examples [here](/docs/MultipleThemes.md).
 - [ ] Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
 - [X] More themes
 - [X] More advanced sub pages.
-- [ ] Exlude network mode "host" from network stats or do smth else with it (not sure yet)
+- [X] Exlude network mode "host" from network stats or do smth else with it (not sure yet)
 - [ ] Add "Secondary API Host" for High availability
 - [ ] Persistent choice of Theme / Refresh rate
 
