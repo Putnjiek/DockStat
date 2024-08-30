@@ -1,4 +1,7 @@
-# 🐳 Dockstat
+<h1 align="center">🐳 Dockstat 🐳</h1>
+<p align="center">
+  A new Docker Monitoring software
+</p>
 
 Dockstat is a monitoring frontend powered by the [DockStatAPI](https://github.com/Its4Nik/dockstatapi).
 
