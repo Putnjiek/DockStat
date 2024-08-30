@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { FaClipboard, FaClipboardCheck } from "react-icons/fa";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const ConfigModal = ({ apihost, apiKey }) => {
     const [configData, setConfigData] = useState(null);
@@ -68,7 +69,12 @@ const ConfigModal = ({ apihost, apiKey }) => {
                     </SyntaxHighlighter>
                 </>
             ) : (
-                <p>Fetching Configuration.</p>
+                <>
+                    <div className="mt-2">
+                        <CircularProgress />
+                        <p>Fetching Configuration.</p>
+                    </div>
+                </>
             )}
         </>
     );
