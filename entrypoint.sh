@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# For powershell:
+# $env:NODE_OPTIONS="--openssl-legacy-provider"; npm start
+
 API_URL="${API_URL//\"}"
 DEFAULT_THEME="${DEFAULT_THEME//\"}"
 SECRET="${SECRET//\"}"
@@ -76,5 +79,7 @@ echo "
     \"LIGHT_MODE_LOGO_COLOR\": \"$(echo "${LM_LOGO_COLOR}" | tr -d '#')\"
 }
 " > /app/build/config.json
+
+export NODE_OPTIONS=--openssl-legacy-provider
 
 exec serve -s build
