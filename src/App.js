@@ -6,6 +6,7 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import DataFetcher from './components/DataFetcher';
 import Controls from './components/Controls';
 import Loading from './components/Loading';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function App() {
     const [data, setData] = useState({});
@@ -55,6 +56,8 @@ function App() {
             <div className="flex justify-between items-center mb-4">
                 <h1 className="text-3xl font-bold text-primary">DockStat</h1>
                 <Controls
+                    apiKey={apiKey}
+                    apihost={apihost}
                     intervalTime={intervalTime}
                     setIntervalTime={setIntervalTime}
                     theme={theme}
@@ -72,9 +75,13 @@ function App() {
                 setIsInitialLoad={setIsInitialLoad}
                 data={data}
             />
-            <Loading isInitialLoad={isInitialLoad} loadingTheme={loadingTheme} />
             {Object.keys(data).length === 0 ? (
                 <div>
+                    <div className="flex justify-center items-center h-full">
+                        <div className="text-primary">
+                            <CircularProgress />
+                        </div>
+                    </div>
                     <p className="text-center text-primary text-lg">Loading...</p>
                     <p className="text-center text-secondary text-small">If this screen persists, please check the browser console.</p>
                 </div>

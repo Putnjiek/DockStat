@@ -15,11 +15,12 @@ See more examples [here](/docs/MultipleThemes.md).
 
 - [X] Refactoring
 - [X] Fix theme switcher
+- [X] WebUI for API config (Read only)
 - [ ] WebUI for adding/removing hosts from the config of DockStatAPI
 - [X] Sorting for Hosts
 - [ ] Custom host Tags like "Raspberry" or "Cloudserver"
 - [ ] Alert System using apprise or similar
-- [ ] better mobile UI
+- [X] better mobile UI
 - [ ] Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
 - [X] More themes
 - [X] More advanced sub pages.

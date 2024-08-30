@@ -1,28 +1,38 @@
 import React, { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoSettingsOutline, IoTerminalOutline } from "react-icons/io5";
 import { CSSTransition } from 'react-transition-group';
+import ConfigModal from './ConfigModal'
 import SortDropdown from './dropdowns/SortDropdown';
 import ThemeDropdown from './dropdowns/ThemeDropdown';
 import './css/ModalAnimations.css';
+import './css/ConfigModal.css'
 
-const Controls = ({ intervalTime, setIntervalTime, theme, setTheme, sortOption, setSortOption }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const Controls = ({ intervalTime, setIntervalTime, theme, setTheme, sortOption, setSortOption, apihost, apiKey }) => {
+    const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
+    const [isTerminalModalOpen, setIsTerminalModalOpen] = useState(false);
 
     const handleThemeChange = (e) => {
         setTheme(e.target.value);
     };
-
     return (
         <>
             {/* Control Buttons */}
             <div className="flex items-center space-x-4">
-                {/* Open Modal Button */}
+                {/* Open Settings Modal Button */}
                 <button
                     className="btn btn-outline flex items-center space-x-2"
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => setIsSettingsModalOpen(true)}
                 >
                     <IoSettingsOutline />
+                </button>
+
+                {/* Open Terminal Modal Button */}
+                <button
+                    className="btn btn-outline flex items-center space-x-2"
+                    onClick={() => setIsTerminalModalOpen(true)}
+                >
+                    <IoTerminalOutline />
                 </button>
 
                 {/* GitHub Icon */}
@@ -36,9 +46,9 @@ const Controls = ({ intervalTime, setIntervalTime, theme, setTheme, sortOption, 
                 </a>
             </div>
 
-            {/* Modal for Settings */}
+            {/* Settings Modal */}
             <CSSTransition
-                in={isModalOpen}
+                in={isSettingsModalOpen}
                 timeout={300}
                 classNames="modal"
                 unmountOnExit
@@ -50,7 +60,6 @@ const Controls = ({ intervalTime, setIntervalTime, theme, setTheme, sortOption, 
                         {/* Theme Selector */}
                         <div className="mb-4">
                             <h3 className="text-md font-medium mb-2">Select Theme</h3>
-                            {/* <p>Current Theme: {theme}</p> */}
                             <ThemeDropdown
                                 value={theme}
                                 onChange={handleThemeChange}
@@ -82,7 +91,42 @@ const Controls = ({ intervalTime, setIntervalTime, theme, setTheme, sortOption, 
 
                         <button
                             className="btn btn-primary mt-6 w-full"
-                            onClick={() => setIsModalOpen(false)}
+                            onClick={() => setIsSettingsModalOpen(false)}
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </CSSTransition>
+
+            {/* Terminal Modal */}
+            <CSSTransition
+                in={isTerminalModalOpen}
+                timeout={300}
+                classNames="modal"
+                unmountOnExit
+            >
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 bg-base-100 backdrop-filter backdrop-blur-sm transition-opacity duration-300 ease-in-out">
+                    <div className="bg-base-100 rounded-lg shadow-lg p-6 transition-transform transform-gpu duration-300 ease-in-out max-h-[80vh] w-full max-w-[75%]">
+                        <div className="mb-4 overflow-y-auto max-h-[60vh]">
+                            <div className="w-full">
+                                <div className="coding inverse-toggle px-5 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased backgroud-config pb-6 pt-4 rounded-lg leading-normal">
+                                    <div className="top mb-1 flex">
+                                        <div className="h-3 w-3 bg-red-500 rounded-full"></div>
+                                        <div className="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
+                                        <div className="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
+                                    </div>
+                                    <div className="mt-1 flex">
+                                        <div className="flex-1 typing items-center">
+                                            <ConfigModal apihost={apihost} apiKey={apiKey} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            className="btn btn-primary mt-6 w-full"
+                            onClick={() => setIsTerminalModalOpen(false)}
                         >
                             Close
                         </button>
