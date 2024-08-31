@@ -18,7 +18,7 @@ See more examples [here](/docs/MultipleThemes.md).
 - [X] WebUI for API config (Read only)
 - [ ] WebUI for adding/removing hosts from the config of DockStatAPI
 - [X] Sorting for Hosts
-- [ ] Custom host Tags like "Raspberry" or "Cloudserver"
+- [X] Custom host Tags like "Raspberry" or "Cloudserver"
 - [ ] Alert System using apprise or similar
 - [X] better mobile UI
 - [ ] Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
@@ -187,6 +187,7 @@ container:
 
 ## ✨ Tag different containers
 
+![Tag example](/docs/screenshots/examples/16.png)
 To Tag different containers you have to add this to the config of your desired container at the backend side:
 
 ```yaml
@@ -215,6 +216,13 @@ https://tailwindcss.com/docs/border-color
 All supported colors are [here](/src/components/css/Tags.css).   
 
 ⚠️ Only full borders are supported somethin like `border-x-teal-50` or `x-teal-50` will not work.
+
+The config for the example was this one:
+```yaml
+constainer:
+  dockstatapi:
+    tags: private:violet-700,cloudserver:red-900,api:blue-800
+```
 
 ---
 
