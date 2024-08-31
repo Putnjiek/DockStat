@@ -28,7 +28,7 @@ function AdvancedStats({ id, containerName, link, icon, logoSize, darkModeLogoCo
     return (
         <>
             <IoIosInformationCircleOutline
-                className="absolute top-2 right-2 text-primary z-10 cursor-pointer"
+                className="text-xl absolute right-0 flex flex-wrap"
                 onClick={handleIconClick}
             />
 

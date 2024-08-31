@@ -207,8 +207,14 @@ container:
 
 For color specifications we are using TailwindCSS background color values.
 
+Just take the desired color and remove the `border-` infront of the text.
+
 To choose the right color for your need have a look here:
-https://tailwindcss.com/docs/background-color
+https://tailwindcss.com/docs/border-color
+
+All supported colors are [here](/src/components/css/Tags.css).   
+
+⚠️ Only full borders are supported somethin like `border-x-teal-50` or `x-teal-50` will not work.
 
 ---
 
