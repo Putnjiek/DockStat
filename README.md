@@ -18,7 +18,7 @@ See more examples [here](/docs/MultipleThemes.md).
 - [X] WebUI for API config (Read only)
 - [ ] WebUI for adding/removing hosts from the config of DockStatAPI
 - [X] Sorting for Hosts
-- [ ] Custom host Tags like "Raspberry" or "Cloudserver"
+- [X] Custom host Tags like "Raspberry" or "Cloudserver"
 - [ ] Alert System using apprise or similar
 - [X] better mobile UI
 - [ ] Host Stats (CPU Cores, Max RAM amount available and ram used by containers)
