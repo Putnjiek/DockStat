@@ -5,8 +5,8 @@ import { ToastContainer } from 'react-toastify';
 import AdvancedStats from './AdvancedStats';
 import 'react-toastify/dist/ReactToastify.css';
 import './css/ContainerStats.css';
-import './css/LogoSizes.css'
-
+import './css/LogoSizes.css';
+import './css/Tags.css';
 
 function formatBytesToMB(bytes) {
     return (bytes / (1024 * 1024)).toFixed(2);
@@ -34,8 +34,16 @@ function getStatusClass(status) {
     }
 }
 
+// Function to parse tags and generate an array of objects with tag name and class
+function parseTags(tags) {
+    return tags.split(',').map(tag => {
+        const [tagName, colorClass] = tag.split(':');
+        return { tagName, colorClass: `border-2 border-${colorClass}` };
+    });
+}
+
 function ContainerStats({ container, logoSize, darkModeLogoColor, lightModeLogoColor }) {
-    const { name, state, cpu_usage, mem_usage, mem_limit, current_net_rx, current_net_tx, link, icon, id, networkMode } = container;
+    const { name, state, cpu_usage, mem_usage, mem_limit, current_net_rx, current_net_tx, link, icon, id, networkMode, tags } = container;
     const [prevCpuUsage, setPrevCpuUsage] = useState(cpu_usage);
     const cpuPercentage = calculateCpuPercentage(cpu_usage, 100000000000000);
     let isHostNetwork = "";
@@ -46,32 +54,49 @@ function ContainerStats({ container, logoSize, darkModeLogoColor, lightModeLogoC
 
     const containerName = name.startsWith('/') ? name.substring(1) : name;
 
-    // Check if the icon is a Simple Icon by checking the "SI:" prefix
     const isSimpleIcon = icon && icon.startsWith("SI:");
     const simpleIconName = isSimpleIcon ? icon.substring(3).toLowerCase() : null; // Convert to lowercase for the slug
 
     if (networkMode === "Host") {
         isHostNetwork = "1";
-    }
-    else if (networkMode === "host") {
+    } else if (networkMode === "host") {
         isHostNetwork = "1";
-    }
-    else {
+    } else {
         isHostNetwork = "";
     }
 
+    // Parse the tags
+    const parsedTags = tags ? parseTags(tags) : [];
+
     return (
         <div className="card shadow-md p-4 rounded-lg border border-base-300 relative">
-            <AdvancedStats
-                networkMode={networkMode}
-                id={id}
-                containerName={containerName}
-                link={link}
-                icon={icon}
-                darkModeLogoColor={darkModeLogoColor}
-                lightModeLogoColor={lightModeLogoColor}
-            />
             <ToastContainer />
+
+            {/* Tags and Advanced Stats aligned */}
+            <div className="absolute top-3 right-2 flex flex-wrap items-center justify-between mb-2">
+                {/* Display Tags */}
+                <div className="flex mr-6 flex-wrap gap-1">
+                    {parsedTags.map((tag, index) => (
+                        <span
+                            key={index}
+                            className={`${tag.colorClass} text-xs font-semibold py-1 px-2 rounded-xl`}>
+                            {tag.tagName}
+                        </span>
+                    ))}
+                </div>
+
+                {/* Advanced Stats Icon */}
+                <AdvancedStats
+                    networkMode={networkMode}
+                    id={id}
+                    containerName={containerName}
+                    link={link}
+                    icon={icon}
+                    darkModeLogoColor={darkModeLogoColor}
+                    lightModeLogoColor={lightModeLogoColor}
+                />
+            </div>
+
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
                     <div className={`status-orb ${getStatusClass(state)} ${state === 'running' || state === 'starting' || state === 'error' ? 'pulse' : ''}`}></div>
