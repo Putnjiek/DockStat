@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import React, { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import HostStats from './components/HostStats';
 import ConfigFetcher from './components/ConfigFetcher';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import DataFetcher from './components/DataFetcher';
 import Controls from './components/Controls';
-import Loading from './components/Loading';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 function App() {

@@ -185,6 +185,33 @@ container:
 
 ---
 
+## ✨ Tag different containers
+
+To Tag different containers you have to add this to the config of your desired container at the backend side:
+
+```yaml
+container:
+  MyContainer:
+    tags: private:violet-400
+```
+
+You can add multiple tags by seperating them like this:
+
+(I don't recommend more then 2 tags otherwise it will look cluttered)
+
+```yaml
+container:
+  MyContainer:
+    tags: private:violet-400,cloudserver:red-200
+```
+
+For color specifications we are using TailwindCSS background color values.
+
+To choose the right color for your need have a look here:
+https://tailwindcss.com/docs/background-color
+
+---
+
 ## 🚫 Known Issues
 ### Open:
 
