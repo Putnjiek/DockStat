@@ -1,0 +1,48 @@
+name: Feature Request
+description: Submit a feature request
+title: "[Feature Request]: "
+labels: ["Ideas"]
+assignees:
+  - its4nik
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking a look at Dockstat!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: func
+    attributes:
+      label: Functionality
+      description: What kind of functionality do you wish your feature to have? 
+      placeholder: ...
+      value: "Feature Request"
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: Where should this button / dropdown / JSON value / ... be placed? 
+      description: Please tell us how and where on the frontend or backend this needs to be implemented. You can attach screenshots with arrows or descrptions like: Control bar.
+    validations:
+      required: true
+  - type: dropdown
+    id: back-or-front
+    attributes:
+      label: Backend and/or Frontend?
+      description: Where does the change need to happen?
+      options:
+        - Frontend
+        - Backend
+        - Frontend and Backend
+        - neither
+      default: 0
+    validations:
+      required: true
