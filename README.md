@@ -227,11 +227,12 @@ constainer:
 ---
 
 ## Star History
-<a href="https://star-history.com/#its4nik/dockstat&Date">
+
+<a href="https://star-history.com/#its4nik/dockstat&its4nik/dockstatapi&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=its4nik/dockstat&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=its4nik/dockstat&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=its4nik/dockstat&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=its4nik/dockstat,its4nik/dockstatapi&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=its4nik/dockstat,its4nik/dockstatapi&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=its4nik/dockstat,its4nik/dockstatapi&type=Date" />
  </picture>
 </a>
 
