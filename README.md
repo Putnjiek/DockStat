@@ -11,6 +11,10 @@ It shows usage statistics like CPU, RAM and Network usage.
 
 See more examples [here](/docs/MultipleThemes.md).
 
+See the documentation (WIP) here:
+
+https://outline.itsnik.de/s/dockstat
+
 ## 🖊️ WORK IN PROGRESS
 
 - [X] Refactoring
