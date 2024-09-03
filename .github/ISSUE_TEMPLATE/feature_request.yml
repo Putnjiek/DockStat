@@ -30,7 +30,7 @@ body:
     id: how
     attributes:
       label: Where should this button / dropdown / JSON value / ... be placed? 
-      description: Please tell us how and where on the frontend or backend this needs to be implemented. You can attach screenshots with arrows or descrptions like: Control bar.
+      description: Please tell us how and where on the frontend or backend this needs to be implemented. You can attach screenshots with arrows or add descrptions like this 'Control bar'.
     validations:
       required: true
   - type: dropdown
