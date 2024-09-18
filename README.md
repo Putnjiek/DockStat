@@ -88,9 +88,9 @@ Please see [Configuration.md](/docs/Configuration.md)
 
 ### Resolved
 
-1. Theme switching only works once. See [code logic](/docs/known-issues.md#1-theme-switching-bug) for details.
+1. Theme switching only works once. See [code logic](/docs/known-issues.md#-----1-theme-switching-bug) for details.
 
-2. Adding the default theme will make other themes unusable due to not being able to select them. See [code logic](/docs/known-issues.md#2-theme-unavailability-issue) for details.
+2. Adding the default theme will make other themes unusable due to not being able to select them. See [code logic](/docs/known-issues.md#-----2-theme-unavailability-issue) for details.
 ---
 
 Please don't judge this project too harshly—it's my first major React project. For more information, open a new issue! 😄
