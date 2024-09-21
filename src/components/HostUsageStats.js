@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
-function HostUsageStats({ apihost, apiKey }) {
+function HostUsageStats({ apihost, apiKey, TargetHost }) {
     const [hostStats, setHostStats] = useState({});
 
     const fetchData = async () => {
@@ -33,18 +33,22 @@ function HostUsageStats({ apihost, apiKey }) {
     }, [apihost, apiKey]);
 
     return (
-        <div>
-            {Object.keys(hostStats).map((host) => (
-                <div key={host} className="grid grid-cols-2 gap-1">
-                    <h3 className="text-secondary">Available Memory: {(hostStats[host].totalMemory / (1024 ** 3)).toFixed(2)} GB</h3>
-                    <h3 className="text-secondary">Cpu Cores: {hostStats[host].totalCPUs}</h3>
-                    <h3 className="text-secondary">Memory Usage: {hostStats[host].memoryUsage}%</h3>
+        <>
+            {hostStats[TargetHost] ? (
+                <div className="grid grid-cols-2 gap-1">
                     <h3 className="text-secondary">
-                        CPU Usage: {calculateCpuPercentage(parseFloat(hostStats[host].cpuUsage), 100000000000000)}%
+                        Available Memory: {(hostStats[TargetHost].totalMemory / (1024 ** 3)).toFixed(2)} GB
+                    </h3>
+                    <h3 className="text-secondary">CPU Cores: {hostStats[TargetHost].totalCPUs}</h3>
+                    <h3 className="text-secondary">Memory Usage: {hostStats[TargetHost].memoryUsage} %</h3>
+                    <h3 className="text-secondary">
+                        CPU Usage: {calculateCpuPercentage(parseFloat(hostStats[TargetHost].cpuUsage), 100000000000000)}%
                     </h3>
                 </div>
-            ))}
-        </div>
+            ) : (
+                <p className="text-secondary">Loading host statistics...</p>
+            )}
+        </>
     );
 }
 
