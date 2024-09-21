@@ -46,6 +46,7 @@ function HostStats({ host, containers, logoSize, darkModeLogoColor, lightModeLog
                 <h2 className="text-xl font-semibold mb-2 text-primary flex-1">{host} - {containers.length} Containers</h2>
                 <div className="text-right ml-4">
                     <HostUsageStats
+                        TargetHost={host}
                         apihost={apihost}
                         apiKey={apiKey}                    
                     />
