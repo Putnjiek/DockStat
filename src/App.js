@@ -101,6 +101,8 @@ function App() {
                             darkModeLogoColor={darkModeLogoColor}
                             lightModeLogoColor={lightModeLogoColor}
                             gridSize={gridSize}
+                            apiKey={apiKey}
+                            apihost={apihost}
                         />
                     );
                 })

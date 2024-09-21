@@ -23,7 +23,7 @@ Check the documentation (WIP) [here](https://outline.itsnik.de/s/dockstat).
 - [X] Custom host tags (e.g., "Raspberry", "Cloudserver")
 - [ ] Alert System (using Apprise or similar)
 - [X] Improved mobile UI
-- [ ] Host Stats (CPU cores, Max RAM, RAM used by containers)
+- [X] Host Stats (CPU cores, Max RAM, RAM used by containers)
 - [X] More themes
 - [X] More advanced sub-pages
 - [X] Exclude network mode "host" from network stats or other handling

@@ -2,8 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FaArrowDown } from "react-icons/fa";
 
 import ContainerStats from './ContainerStats';
+import HostUsageStats from './HostUsageStats';
 
-function HostStats({ host, containers, logoSize, darkModeLogoColor, lightModeLogoColor, gridSize }) {
+function HostStats({ host, containers, logoSize, darkModeLogoColor, lightModeLogoColor, gridSize , apihost, apiKey}) {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [contentHeight, setContentHeight] = useState('auto');
     const contentRef = useRef(null);
@@ -44,8 +45,10 @@ function HostStats({ host, containers, logoSize, darkModeLogoColor, lightModeLog
                 </span>
                 <h2 className="text-xl font-semibold mb-2 text-primary flex-1">{host} - {containers.length} Containers</h2>
                 <div className="text-right ml-4">
-                    <h3 className="text-secondary">Ram amount: TODO</h3>
-                    <h3 className="text-secondary">CPU Cores: TODO</h3>
+                    <HostUsageStats
+                        apihost={apihost}
+                        apiKey={apiKey}                    
+                    />
                 </div>
             </div>
             <div
