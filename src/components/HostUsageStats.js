@@ -38,7 +38,7 @@ function HostUsageStats({ apihost, apiKey }) {
                 <div key={host} className="grid grid-cols-2 gap-1">
                     <h3 className="text-secondary">Available Memory: {(hostStats[host].totalMemory / (1024 ** 3)).toFixed(2)} GB</h3>
                     <h3 className="text-secondary">Cpu Cores: {hostStats[host].totalCPUs}</h3>
-                    <h3 className="text-secondary">Memory Usage: {hostStats[host].memoryUsage}</h3>
+                    <h3 className="text-secondary">Memory Usage: {hostStats[host].memoryUsage}%</h3>
                     <h3 className="text-secondary">
                         CPU Usage: {calculateCpuPercentage(parseFloat(hostStats[host].cpuUsage), 100000000000000)}%
                     </h3>
