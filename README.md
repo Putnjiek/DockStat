@@ -84,7 +84,7 @@ Please see [Configuration.md](/docs/Configuration.md)
 
 ### Open
 
-3. No "Known Issues" 🎉🎉🎉
+3. [#24](https://github.com/Its4Nik/dockstat/issues/24)
 
 ### Resolved
 
