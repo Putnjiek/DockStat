@@ -21,7 +21,7 @@ Check the documentation (WIP) [here](https://outline.itsnik.de/s/dockstat).
 - [ ] WebUI for adding/removing hosts from DockStatAPI config
 - [X] Sorting for Hosts
 - [X] Custom host tags (e.g., "Raspberry", "Cloudserver")
-- [ ] Alert System (using Apprise or similar)
+- [X] Alert System (using Apprise or similar)
 - [X] Improved mobile UI
 - [X] Host Stats (CPU cores, Max RAM, RAM used by containers)
 - [X] More themes
