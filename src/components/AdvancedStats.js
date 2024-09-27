@@ -82,8 +82,9 @@ function AdvancedStats({
 									<p>No link available</p>
 								)}
 							</div>
-							<div className="bg-base-200 p-2 rounded-lg shadow-md text-center">
+							<div className="bg-base-200 p-2 rounded-lg shadow-md text-center ">
 								<h3 className="text-md font-semibold mb-1">Logo</h3>
+								<div className="flex justify-center">
 								{isSimpleIcon ? (
 									<img
 										src={`https://cdn.simpleicons.org/${simpleIconName}${
@@ -103,6 +104,7 @@ function AdvancedStats({
 								) : (
 									<span className="text-secondary">No icon for this container available.</span>
 								)}
+								</div>
 							</div>
 						</div>
 
