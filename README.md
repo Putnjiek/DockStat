@@ -33,7 +33,8 @@
 - [X] Exclude network mode "host" from network stats or other handling
 - [ ] Add "Secondary API Host" for high availability
 - [ ] Persistent theme/refresh rate choice
-- [X] Changable size of "Container Cards" 
+- [X] Changable size of "Container Cards"
+- [X] Integration with [cup](https://github.com/sergi0g/cup), DockStat Wiki: [Integrations - Cup]()
 
 ---
 
