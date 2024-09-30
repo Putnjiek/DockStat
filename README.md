@@ -45,7 +45,7 @@ Integrations allow you to connect external sercives to DockStat.
 ## List:
 - [🥤 Cup](https://github.com/sergi0g/cup)
 
-To configure your integrations and see more details please visit the [wiki](https://outline.itsnik.de/doc/integrations-Agq1oL6HxF).
+To configure your integrations and see more details please visit the [wiki](https://outline.itsnik.de/s/dockstat/doc/integrations-Agq1oL6HxF).
 
 
 ---
@@ -88,7 +88,7 @@ services:
 
 <h1 align="center">Configuration</h1>
 
-Please see [Configuration.md](/docs/Configuration.md)
+[Wiki](https://outline.itsnik.de/s/dockstat/doc/customization-PiBz4OpQIZ)
 
 ---
 
