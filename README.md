@@ -34,7 +34,7 @@
 - [ ] Add "Secondary API Host" for high availability
 - [ ] Persistent theme/refresh rate choice
 - [X] Changable size of "Container Cards"
-- [X] Integration with [cup](https://github.com/sergi0g/cup), DockStat Wiki: [Integrations - Cup]()
+- [X] Integration with [cup](https://github.com/sergi0g/cup), DockStat Wiki: [Integrations - Cup](https://outline.itsnik.de/s/dockstat/doc/integrations-Agq1oL6HxF#h-cup)
 
 ---
 
