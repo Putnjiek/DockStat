@@ -1,5 +1,5 @@
 <h1>
-  <img align="center" src="https://github.com/user-attachments/assets/b7232bbd-6e47-4167-bec6-8ea7bca213c0" width="400" alt="DockStat Logo" />
+  <img align="center" src="https://github.com/user-attachments/assets/b7232bbd-6e47-4167-bec6-8ea7bca213c0" alt="DockStat Logo" />
 </h1>
 <p align="left">
   Dockstat is a monitoring frontend powered by the <a href="https://github.com/Its4Nik/dockstatapi">DockStatAPI</a>. <br>
