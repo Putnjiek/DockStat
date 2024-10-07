@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
   <title>Dockstat</title>
   <style>
-    body {
+    .nojs {
       font-family: sans-serif;
       background-color: #121212;
       color: #e0e0e0;
@@ -23,15 +23,17 @@
 
   <!-- Message for users with JavaScript disabled -->
   <noscript>
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
-      <img style="width: 80%"src="/static/logo-text.png" />
-      <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">JavaScript Required</h1>
-      <p style="font-size: 1.25rem; margin-bottom: 0.5rem;">
-        It looks like JavaScript is disabled in your browser. Please enable JavaScript to use this application.
-      </p>
-      <p style="font-size: 1.25rem;">
-        Once you have enabled JavaScript, please refresh the page.
-      </p>
+    <div class="nojs">
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+        <img style="width: 80%"src="/static/logo-text.png" />
+        <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">JavaScript Required</h1>
+        <p style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+          It looks like JavaScript is disabled in your browser. Please enable JavaScript to use this application.
+        </p>
+        <p style="font-size: 1.25rem;">
+          Once you have enabled JavaScript, please refresh the page.
+        </p>
+      </div>
     </div>
   </noscript>
 
