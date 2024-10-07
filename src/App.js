@@ -56,7 +56,10 @@ function App() {
         <div className="container mx-auto p-4">
             <ToastContainer />
             <div className="flex justify-between items-center mb-4">
-                <h1 className="text-3xl font-bold text-primary">DockStat</h1>
+            <div className="flex justify-center align-center">
+                <img className="w-20" src="/static/logo.png" alt="dockstat logo" />
+                <h1 className="ml-2 my-auto text-3xl font-bold text-primary">DockStat</h1>
+            </div>
                 <Controls
                     apiKey={apiKey}
                     apihost={apihost}
