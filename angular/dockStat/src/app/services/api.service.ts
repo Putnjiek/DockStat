@@ -1,13 +1,14 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, firstValueFrom, Observable, throwError } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
+import { catchError, throwError } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // This allows Angular to provide ApiService at the root level
 })
 export class ApiService {
 
-  private readonly apiUrl = "https://itsnik/dockstatapi.com/";
+  private readonly apiUrl = "https://itsnik.dockstatapi.com";
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +20,6 @@ export class ApiService {
           .pipe(catchError(this.handleError))
       );
     } catch (error) {
-      // handle error if needed
       throw error;
     }
   }

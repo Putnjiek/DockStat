@@ -1,0 +1,36 @@
+.border {
+    padding: 1.5rem;
+}
+
+.container {
+    display: flex;
+
+    .icon-container {
+        padding-right: var(--default-padding-large);
+
+        .icon {
+            cursor: pointer;
+        }
+    }
+
+    .text {
+        flex: 1 1;
+        color: var(--accordion-text-color);
+    }
+
+    .server-status {
+        color: var(--accordion-sever-status-color);
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: var(--default-padding-large);
+        text-align: end;
+        align-items: center;
+        justify-items: left;
+    }
+}
+
+.accordion-icon-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
