@@ -72,6 +72,7 @@ export const mockContainers: Container[] = [
         net_tx: 0,
         networkMode: "",
         state: State.running,
-        tags: "databank"
+        tags: "databank",
+        icon: "https://cdn.simpleicons.org/postgresql"
     },
 ]

@@ -36,6 +36,9 @@
                     </div>
                     {{container.current_net_tx}} MB/s
                 </div>
+                @if(container.icon){
+                <img [src]="container.icon" [alt]="container.hostName" class="image-icon">
+                }
             </div>
             }
         </div>
