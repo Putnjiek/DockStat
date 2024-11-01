@@ -1,4 +1,4 @@
-import { State } from "../components/enums/state";
+import { State } from "../enums/state";
 import { Container } from "../interfaces/container";
 
 export const mockContainers: Container[] = [
@@ -14,7 +14,7 @@ export const mockContainers: Container[] = [
         net_rx: 0,
         net_tx: 0,
         networkMode: "",
-        state: State.available
+        state: State.running
     },
     {
         cpu_usage: 0.97,
@@ -28,7 +28,7 @@ export const mockContainers: Container[] = [
         net_rx: 0,
         net_tx: 0,
         networkMode: "",
-        state: State.available,
+        state: State.running,
         tags: "public"
     },
     {
@@ -43,7 +43,7 @@ export const mockContainers: Container[] = [
         net_rx: 0,
         net_tx: 0,
         networkMode: "",
-        state: State.available
+        state: State.running
     },
     {
         cpu_usage: 5.26,
@@ -57,7 +57,7 @@ export const mockContainers: Container[] = [
         net_rx: 0,
         net_tx: 0,
         networkMode: "",
-        state: State.available
+        state: State.running
     },
     {
         cpu_usage: 1.35,
@@ -71,7 +71,7 @@ export const mockContainers: Container[] = [
         net_rx: 0,
         net_tx: 0,
         networkMode: "",
-        state: State.available,
+        state: State.running,
         tags: "databank"
     },
 ]

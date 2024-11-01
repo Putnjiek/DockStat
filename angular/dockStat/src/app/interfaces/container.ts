@@ -1,4 +1,4 @@
-import { State } from "../components/enums/state";
+import { State } from "../enums/state";
 
 export interface Container {
     name: string,

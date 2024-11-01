@@ -8,7 +8,7 @@ import { catchError, throwError } from 'rxjs';
 })
 export class ApiService {
 
-  private readonly apiUrl = "https://itsnik.dockstatapi.com";
+  private readonly apiUrl = "https://dockstatapi-anni.hetzner.itsnik.de/api-docs";
 
   constructor(private http: HttpClient) { }
 

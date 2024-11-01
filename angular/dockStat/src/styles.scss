@@ -6,17 +6,29 @@
     --border-color: #1f202a;
     --accordion-text-color: #ff79c6;
     --accordion-sever-status-color: #bd93f9;
+    --status-green: #0f0;
+    --status-red: red;
+    --status-grey: grey;
+    --status-orange: orange;
+    --shadow: 0 4px 6px -1px #0000001a;
+    --shadow-offset: 0 18px 10px 4px #0000001a;
+
+    --upload-download-color: #40e0d0;
+    --cpu-ram-color: #ff79c6;
 
     //padding
     --default-padding-small: 2px;
     --default-padding-medium: 5px;
     --default-padding-large: 8px;
     --default-padding-xlarge: 10px;
+    --default-padding-xxlarge: 1rem;
 
     --default-border-radius: .5rem;
 
     //font
     --default-font: sans-serif;
+
+
 }
 
 * {
@@ -37,6 +49,14 @@ body {
     border-radius: var(--default-border-radius);
 }
 
+.border-shadow {
+    box-shadow: var(--shadow);
+
+    &:hover {
+        box-shadow: var(--shadow-offset);
+    }
+}
+
 .rotate-180 {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s;
@@ -49,11 +69,66 @@ body {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
+.transition-all {
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
 .accordion-icon-color {
     color: white;
 }
 
 .ease-in-out {
-    transition-duration: .3s;
-    transition-timing-function: cubic-bezier(0, 0, .2, 1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .5s;
+}
+
+@keyframes pulse-animation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .7;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse-animation 1s infinite;
+}
+
+.status-color {
+    &.running {
+        background-color: var(--status-green);
+    }
+
+    &.error {
+        background-color: var(--status-red);
+    }
+
+    &.stopped {
+        background-color: var(--status-grey);
+    }
+
+    &.starting {
+        background-color: var(--status-orange);
+    }
+}
+
+//icon color for container
+
+.container-upload-download-color {
+    color: var(--upload-download-color);
+}
+
+.container-cpu-ram-color {
+    color: var(--cpu-ram-color)
 }

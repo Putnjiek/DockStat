@@ -1,0 +1,40 @@
+.container {
+    padding: .5rem 0 1.5rem 0;
+
+    .no-containers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: .75rem;
+
+        .card-padding {
+            padding: 1rem;
+            display: grid;
+            gap: var(--default-padding-large);
+        }
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            gap: var(--default-padding-large);
+
+            .status-orb {
+                border-radius: 50%;
+                height: 12px;
+                width: 12px;
+            }
+
+            .container-name {
+                font-weight: 600;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+}
