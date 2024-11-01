@@ -1,5 +1,6 @@
 export enum State {
-    available = "available",
+    running = "running",
     error = "error",
-    stopped = "stopped"
+    stopped = "stopped",
+    starting = "starting"
 }
