@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, firstValueFrom, Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,28 +11,53 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  get<T>(route: string, params?: any): Observable<T> {
-    return this.http
-      .get<T>(`${this.apiUrl}/${route}`, { params })
-      .pipe(catchError(this.handleError));
+  async get<T>(route: string, params?: any): Promise<T> {
+    try {
+      return await firstValueFrom(
+        this.http
+          .get<T>(`${this.apiUrl}/${route}`, { params })
+          .pipe(catchError(this.handleError))
+      );
+    } catch (error) {
+      // handle error if needed
+      throw error;
+    }
   }
 
-  post<T>(route: string, body: any): Observable<T> {
-    return this.http
-      .post<T>(`${this.apiUrl}/${route}`, body)
-      .pipe(catchError(this.handleError));
+  async post<T>(route: string, body: any): Promise<T> {
+    try {
+      return await firstValueFrom(
+        this.http
+          .post<T>(`${this.apiUrl}/${route}`, body)
+          .pipe(catchError(this.handleError))
+      );
+    } catch (error) {
+      throw error;
+    }
   }
 
-  put<T>(route: string, body: any): Observable<T> {
-    return this.http
-      .put<T>(`${this.apiUrl}/${route}`, body)
-      .pipe(catchError(this.handleError));
+  async put<T>(route: string, body: any): Promise<T> {
+    try {
+      return await firstValueFrom(
+        this.http
+          .put<T>(`${this.apiUrl}/${route}`, body)
+          .pipe(catchError(this.handleError))
+      );
+    } catch (error) {
+      throw error;
+    }
   }
 
-  delete<T>(route: string): Observable<T> {
-    return this.http
-      .delete<T>(`${this.apiUrl}/${route}`)
-      .pipe(catchError(this.handleError));
+  async delete<T>(route: string): Promise<T> {
+    try {
+      return await firstValueFrom(
+        this.http
+          .delete<T>(`${this.apiUrl}/${route}`)
+          .pipe(catchError(this.handleError))
+      );
+    } catch (error) {
+      throw error;
+    }
   }
 
   private handleError(error: HttpErrorResponse) {
