@@ -80,8 +80,7 @@ body {
 }
 
 .ease-in-out {
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .5s;
+    transition: transform 0.5s cubic-bezier(.4, 0, .2, 1);
 }
 
 @keyframes pulse-animation {

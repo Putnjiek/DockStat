@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { ApiService } from './services/api.service';
 import { StatusCardComponent } from './components/status-card/status-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { StatusCardComponent } from './components/status-card/status-card.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     ApiService // Register ApiService as a provider

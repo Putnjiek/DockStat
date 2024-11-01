@@ -1,4 +1,3 @@
-<!-- @if(containers().length) { -->
 <div class="border">
     <div class="container">
         <div class="icon-container">
@@ -27,13 +26,10 @@
         </div>
         }
     </div>
-    @if(isAccordionOpen()){
-    <div class="ease-in-out">
+    <div [@accordionToggle]="isAccordionOpen() ? 'open' : 'closed'">
         <ng-content></ng-content>
         <div class="accordion-icon-down" (click)="isAccordionOpen.set(!isAccordionOpen())">
             <i class="fa-solid fa-arrow-up accordion-icon-color"></i>
         </div>
     </div>
-    }
 </div>
-<!-- } -->
