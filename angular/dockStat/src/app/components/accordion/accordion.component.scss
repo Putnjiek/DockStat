@@ -10,6 +10,8 @@
         padding-right: var(--default-padding-large);
 
         .icon {
+            display: flex;
+            justify-content: center;
             cursor: pointer;
         }
     }
