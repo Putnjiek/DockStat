@@ -4,6 +4,7 @@
 
 .container {
     display: flex;
+    align-items: center;
 
     .icon-container {
         padding-right: var(--default-padding-large);
@@ -16,16 +17,18 @@
     .text {
         flex: 1 1;
         color: var(--accordion-text-color);
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
 
     .server-status {
         color: var(--accordion-sever-status-color);
         display: grid;
-        grid-template-columns: auto auto;
-        gap: var(--default-padding-large);
-        text-align: end;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .5rem;
+        text-align: right;
         align-items: center;
-        justify-items: left;
     }
 }
 
