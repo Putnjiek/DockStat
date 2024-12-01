@@ -7,5 +7,6 @@ export enum Theme {
     Sunset = "Sunset",
     Night = "Night",
     Forest = "Forest",
-    Amoled = "Amoled"
+    Amoled = "Amoled",
+    Cyberpunk = "Cyberpunk"
 }

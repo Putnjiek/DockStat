@@ -5,10 +5,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -28,10 +24,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -51,10 +43,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -74,10 +62,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -97,10 +81,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -120,10 +100,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -143,10 +119,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -166,10 +138,6 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
@@ -189,13 +157,28 @@
     --border-color: #1f202a;
     --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
-    --status-green: #0f0;
-    --status-red: red;
-    --status-grey: grey;
-    --status-orange: orange;
 
     --upload-download-color: #40e0d0;
     --cpu-ram-color: #ff7ac6;
+
+    //dialog
+    --dialog-button-background: var(--title-color);
+    --dialog-button-color: #16050e;
+
+    --github-logo-background: var(--title-color);
+    --github-logo-hover-background: var(--accordion-sever-status-color);
+}
+
+[data-theme="Cyberpunk"] {
+    --background-color: #002222;
+    --title-color: #ffff00;
+    --text-color: white;
+    --border-color: #bd93f9;
+    --accordion-text-color: var(--title-color);
+    --accordion-sever-status-color: #bd93f9;
+
+    --upload-download-color: #00ffff;
+    --cpu-ram-color: #ff00ff;
 
     //dialog
     --dialog-button-background: var(--title-color);
