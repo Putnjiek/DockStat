@@ -38,9 +38,15 @@
         .button {
             background-color: var(--dialog-button-background);
             border: 0px;
-            color: #16050e;
+            color: var(--dialog-button-color);
             font-size: .875rem;
             font-weight: 600;
+
+            animation: button-pop var(--animation-btn, .25s) ease-out;
+
+            transition-duration: .2s;
+            transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+            transition-timing-function: cubic-bezier(0, 0, .2, 1);
 
             &.expanded {
                 width: 100%;

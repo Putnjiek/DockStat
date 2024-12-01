@@ -33,6 +33,9 @@
     --dialog-background-blur: 4px;
     --dialog-padding: 1.5rem;
     --dialog-button-background: var(--title-color);
+    --dialog-button-color: #16050e;
+
+    --animation-btn: .25s;
 }
 
 * {
@@ -47,6 +50,10 @@ body {
     font-family: var(--default-font);
     margin: 0;
     padding: 1rem;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .logo {
@@ -158,4 +165,18 @@ body {
     height: 3rem;
     justify-content: center;
     text-align: center;
+
+    @keyframes button-pop {
+        0% {
+            transform: scale(.98);
+        }
+
+        40% {
+            transform: scale(1.02);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
 }
