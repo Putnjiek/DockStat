@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    gap: 1rem;
+    z-index: 1;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+
+        .logo-title {
+            display: flex;
+            gap: var(--default-padding-medium);
+            color: var(--title-color);
+            flex: 1;
+
+            .title {
+                font-weight: 700;
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            align-items: end;
+            gap: var(--default-padding-xxlarge);
+        }
+    }
+}

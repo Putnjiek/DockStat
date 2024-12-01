@@ -1,1 +1,22 @@
-<app-status-card />
+<div class="container">
+    <div class="navbar">
+        <div class="logo-title">
+            <img class="logo" src="../assets/pictures/logo.png" alt="dockstat logo" />
+            <h1 class="title">{{title}}</h1>
+        </div>
+        <div class="buttons">
+            <button class="button">setting</button>
+            <button class="button" (click)="codeDialogState().open = true">code</button>
+            <div class="git-logo">
+
+            </div>
+        </div>
+    </div>
+    <app-status-card />
+</div>
+
+<app-dialog [state]="codeDialogState()">
+    <code>
+        {{code}}
+    </code>
+</app-dialog>

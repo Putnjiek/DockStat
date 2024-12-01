@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ServerStatus } from './interfaces/serverStatus';
+import { AuthService } from './services/auth.service';
+import { DialogState } from './components/dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +9,27 @@ import { ServerStatus } from './interfaces/serverStatus';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'dockStat';
+  title = 'DockStat';
 
   serverStatus: ServerStatus = {
     availableMemory: 7.57,
     memoryUsage: 24.12,
     cpuCores: 4,
     cpuUsage: 155.83
+  }
+
+  codeDialogState = signal<DialogState>({
+    open: false,
+    closeButton: false,
+    buttons: [{
+      name: "close",
+      expanded: true
+    }]
+  })
+
+  code = "diggaaahhhh hab doch keine ahnung was da rein muss";
+
+  constructor(private authService: AuthService) {
+    // this.authService.enable("test")
   }
 }
