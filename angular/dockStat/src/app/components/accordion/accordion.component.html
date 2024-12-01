@@ -29,7 +29,7 @@
     </div>
     <div [@accordionToggle]="isAccordionOpen() ? 'open' : 'closed'">
         <ng-content></ng-content>
-        <div class="accordion-icon-down" (click)="isAccordionOpen.set(!isAccordionOpen())">
+        <div class="accordion-icon-down clickable" (click)="isAccordionOpen.set(!isAccordionOpen())">
             <i class="fa-solid fa-arrow-up accordion-icon-color"></i>
         </div>
     </div>
