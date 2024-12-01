@@ -18,7 +18,7 @@ export const mockContainers: Container[] = [
     },
     {
         cpu_usage: 0.97,
-        current_net_rx: 0,
+        current_net_rx: 0.6,
         current_net_tx: 0,
         hostName: "",
         id: "1",
@@ -33,8 +33,8 @@ export const mockContainers: Container[] = [
     },
     {
         cpu_usage: 0.97,
-        current_net_rx: 0,
-        current_net_tx: 0,
+        current_net_rx: 1,
+        current_net_tx: 2,
         hostName: "",
         id: "1",
         mem_limit: 7.57,
