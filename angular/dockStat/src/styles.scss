@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import "themes";
+
 :root {
     //color
     --background-color: #2e3440;
@@ -15,7 +16,7 @@
     --shadow-offset: 0 18px 10px 4px #0000001a;
 
     --upload-download-color: #40e0d0;
-    --cpu-ram-color: rgb(255, 122, 198);
+    --cpu-ram-color: #ff7ac6;
 
     //padding
     --default-padding-small: 2px;
@@ -36,6 +37,9 @@
     --dialog-button-color: #16050e;
 
     --animation-btn: .25s;
+
+    --github-logo-background: var(--title-color);
+    --github-logo-hover-background: var(--accordion-sever-status-color);
 }
 
 * {
@@ -50,6 +54,7 @@ body {
     font-family: var(--default-font);
     margin: 0;
     padding: 1rem;
+
 }
 
 .clickable {
@@ -163,6 +168,7 @@ body {
     font-weight: 600;
     gap: .5rem;
     height: 3rem;
+    min-width: 3rem;
     justify-content: center;
     text-align: center;
 
