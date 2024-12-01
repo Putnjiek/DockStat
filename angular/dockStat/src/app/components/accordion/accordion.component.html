@@ -1,13 +1,14 @@
 <div class="border">
     <div class="container">
-        <div class="icon-container">
-            <div class="transition-transform icon" [class.rotate-180]="!isAccordionOpen()"
-                (click)="isAccordionOpen.set(!isAccordionOpen())">
-                <i class="fa-solid fa-arrow-down accordion-icon-color"></i>
+        <div class="title" (click)="isAccordionOpen.set(!isAccordionOpen())">
+            <div class="icon-container">
+                <div class="transition-transform icon" [class.rotate-180]="!isAccordionOpen()">
+                    <i class="fa-solid fa-arrow-down accordion-icon-color"></i>
+                </div>
             </div>
-        </div>
-        <div class="text">
-            Fin-1 - {{containers().length}} Containers
+            <div class="text">
+                Fin-1 - {{containers().length}} Containers
+            </div>
         </div>
         @if(serverStatus().cpuCores && serverStatus() !== undefined){
         <div class="server-status">
