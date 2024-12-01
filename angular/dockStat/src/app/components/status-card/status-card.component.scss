@@ -15,7 +15,7 @@
 
         .image-icon {
             width: 5rem;
-            position: relative;
+            position: absolute;
             justify-self: end;
             align-self: end;
         }
@@ -44,4 +44,8 @@
             }
         }
     }
+}
+
+.accordion {
+    margin: 0 1rem 0 1rem;
 }

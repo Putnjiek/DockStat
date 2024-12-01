@@ -2,9 +2,10 @@
 :root {
     //color
     --background-color: #2e3440;
+    --title-color: #ff79c6;
     --text-color: white;
     --border-color: #1f202a;
-    --accordion-text-color: #ff79c6;
+    --accordion-text-color: var(--title-color);
     --accordion-sever-status-color: #bd93f9;
     --status-green: #0f0;
     --status-red: red;
@@ -27,8 +28,6 @@
 
     //font
     --default-font: sans-serif;
-
-
 }
 
 * {
@@ -41,6 +40,12 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--default-font);
+    margin: 0;
+    padding: 1rem;
+}
+
+.logo {
+    width: 5rem;
 }
 
 .border {
@@ -130,4 +135,22 @@ body {
 
 .container-cpu-ram-color {
     color: var(--cpu-ram-color)
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background-color: initial;
+    border-color: currentColor;
+    color: #fdf5f7;
+
+    border-radius: .5rem;
+    border-width: 1px;
+    flex-wrap: wrap;
+    font-size: .875rem;
+    font-weight: 600;
+    gap: .5rem;
+    height: 3rem;
+    justify-content: center;
+    text-align: center;
 }

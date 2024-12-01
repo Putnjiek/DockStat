@@ -1,51 +1,53 @@
-<app-accordion [containers]="containers()" [serverStatus]="serverStatus">
-    <div class="container">
-        @if(containers().length){
-        <div class="cards">
-            @for(container of containers(); track container.id){
-            <div class="border border-shadow card-padding transition-all">
-                <div class="card-container">
-                    <div class="status-orb pulse status-color" [ngClass]="container.state"></div>
-                    <div class="container-name">
-                        {{container.name}}
+<div class="accordion">
+    <app-accordion [containers]="containers()" [serverStatus]="serverStatus">
+        <div class="container">
+            @if(containers().length){
+            <div class="cards">
+                @for(container of containers(); track container.id){
+                <div class="border border-shadow card-padding transition-all">
+                    <div class="card-container">
+                        <div class="status-orb pulse status-color" [ngClass]="container.state"></div>
+                        <div class="container-name">
+                            {{container.name}}
+                        </div>
                     </div>
-                </div>
-                <div class="card-container">
-                    <div class="icon">
-                        <i class="fa-solid fa-microchip container-cpu-ram-color"></i>
+                    <div class="card-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-microchip container-cpu-ram-color"></i>
+                        </div>
+                        {{container.cpu_usage}}%
                     </div>
-                    {{container.cpu_usage}}%
-                </div>
-                <div class="card-container">
-                    <div class="icon">
-                        <i class="fa-solid fa-memory container-cpu-ram-color"></i>
+                    <div class="card-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-memory container-cpu-ram-color"></i>
+                        </div>
+                        {{container.mem_usage}} GB / {{container.mem_limit}} GB
                     </div>
-                    {{container.mem_usage}} GB / {{container.mem_limit}} GB
-                </div>
-                <div class="card-container">
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-up container-upload-download-color"
-                            [class.pulse]="container.current_net_rx > 0"></i>
+                    <div class="card-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-arrow-up container-upload-download-color"
+                                [class.pulse]="container.current_net_rx > 0"></i>
+                        </div>
+                        {{container.current_net_rx}} MB/s
                     </div>
-                    {{container.current_net_rx}} MB/s
-                </div>
-                <div class="card-container">
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-down container-upload-download-color"
-                            [class.pulse]="container.current_net_tx > 0"></i>
+                    <div class="card-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-arrow-down container-upload-download-color"
+                                [class.pulse]="container.current_net_tx > 0"></i>
+                        </div>
+                        {{container.current_net_tx}} MB/s
                     </div>
-                    {{container.current_net_tx}} MB/s
+                    @if(container.icon){
+                    <img [src]="container.icon" [alt]="container.hostName" class="image-icon">
+                    }
                 </div>
-                @if(container.icon){
-                <img [src]="container.icon" [alt]="container.hostName" class="image-icon">
                 }
+            </div>
+            }@else {
+            <div class="no-containers">
+                No containers available :(
             </div>
             }
         </div>
-        }@else {
-        <div class="no-containers">
-            No containers available :(
-        </div>
-        }
-    </div>
-</app-accordion>
+    </app-accordion>
+</div>
