@@ -20,7 +20,6 @@ export class AppComponent {
 
   codeDialogState = signal<DialogState>({
     open: false,
-    closeButton: false,
     buttons: [{
       name: "close",
       expanded: true

@@ -54,6 +54,10 @@
                 justify-content: flex-start;
             }
 
+            &.center {
+                justify-content: center;
+            }
+
             &:hover {
                 background-color: color-mix(in oklab, var(--dialog-button-background) 80%, #000);
             }

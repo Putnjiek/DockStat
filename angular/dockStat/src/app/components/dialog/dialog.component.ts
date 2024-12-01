@@ -2,13 +2,12 @@ import { Component, input } from '@angular/core';
 
 export type DialogState = {
   open: boolean,
-  closeButton: boolean,
   buttons: Button[]
 }
 
 export type Button = {
   name: string,
-  style?: "right" | "left" | "none",
+  style?: "right" | "left" | "center",
   expanded?: boolean,
   roundedCorners?: boolean
 }
