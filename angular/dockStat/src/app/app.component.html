@@ -5,10 +5,14 @@
             <h1 class="title">{{title}}</h1>
         </div>
         <div class="buttons">
-            <button class="button" (click)="settingDialogState().open = true">setting</button>
-            <button class="button" (click)="codeDialogState().open = true">code</button>
+            <button class="button" (click)="settingDialogState().open = true">
+                <i class="fa-solid fa-gear fa-xs"></i>
+            </button>
+            <button class="button" (click)="codeDialogState().open = true">
+                <i class="fa-solid fa-code fa-xs"></i>
+            </button>
             <a class="git-logo" href="https://github.com/its4nik/dockstat" target="_blank">
-                github
+                <i class="fa-brands fa-github github-logo"></i>
             </a>
         </div>
     </div>
@@ -30,7 +34,7 @@
             <div class="label">
                 Select Theme
             </div>
-            <select name="theme">
+            <select [(ngModel)]="theme" (change)="onThemeSelection()">
                 @for(theme of themes; track $index){
                 <option [value]="theme">
                     {{theme}}

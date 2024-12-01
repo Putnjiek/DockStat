@@ -1,7 +1,6 @@
 .container {
     display: grid;
     gap: 1rem;
-    z-index: 1;
 
     .navbar {
         display: flex;
@@ -24,6 +23,19 @@
             display: flex;
             align-items: end;
             gap: var(--default-padding-xxlarge);
+
+            .github-logo {
+                display: inline-flex;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                font-size: 2.5rem;
+                color: var(--title-color);
+
+                &:hover {
+                    color: var(--github-logo-hover-background);
+                }
+            }
         }
     }
 }

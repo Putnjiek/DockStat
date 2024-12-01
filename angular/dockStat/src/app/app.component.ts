@@ -39,7 +39,17 @@ export class AppComponent {
 
   themes: Theme[] = [Theme.Amoled, Theme.Business, Theme.Dracula, Theme.Forest, Theme.Light, Theme.Night, Theme.Nord, Theme.Pastel, Theme.Sunset];
 
+  theme = signal<Theme>(Theme.Dracula)
+
   constructor(private authService: AuthService) {
-    // this.authService.enable("test")
+    // this.authService.enable("test");
+
+    this.theme.set(localStorage.getItem("theme") ? localStorage.getItem("theme") as Theme : Theme.Dracula);
+    this.onThemeSelection();
+  }
+
+  onThemeSelection() {
+    document.body.setAttribute("data-theme", this.theme())
+    localStorage.setItem("theme", this.theme())
   }
 }
