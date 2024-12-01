@@ -15,7 +15,7 @@
     --shadow-offset: 0 18px 10px 4px #0000001a;
 
     --upload-download-color: #40e0d0;
-    --cpu-ram-color: #ff79c6;
+    --cpu-ram-color: rgb(255, 122, 198);
 
     //padding
     --default-padding-small: 2px;
@@ -28,6 +28,11 @@
 
     //font
     --default-font: sans-serif;
+
+    //dialog
+    --dialog-background-blur: 4px;
+    --dialog-padding: 1.5rem;
+    --dialog-button-background: var(--title-color);
 }
 
 * {

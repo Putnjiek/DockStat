@@ -8,13 +8,15 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 import { ApiService } from './services/api.service';
 import { StatusCardComponent } from './components/status-card/status-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AccordionComponent,
-    StatusCardComponent
+    StatusCardComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

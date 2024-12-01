@@ -1,0 +1,24 @@
+@if(state().open){
+<div class="container">
+    <div class="dialog">
+        @if(state().closeButton){
+        <div class="close-button">
+
+        </div>
+        }
+
+        <div class="content">
+            <ng-content />
+        </div>
+
+        @if(state().buttons.length){
+        <div class="buttons">
+            @for(button of state().buttons; track $index){
+            <button class="button" [ngClass]="button.style" [class.expanded]="button.expanded"
+                (click)="state().open = !state().open">{{button.name}}</button>
+            }
+        </div>
+        }
+    </div>
+</div>
+}
