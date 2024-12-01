@@ -5,11 +5,11 @@
             <h1 class="title">{{title}}</h1>
         </div>
         <div class="buttons">
-            <button class="button">setting</button>
+            <button class="button" (click)="settingDialogState().open = true">setting</button>
             <button class="button" (click)="codeDialogState().open = true">code</button>
-            <div class="git-logo">
-
-            </div>
+            <a class="git-logo" href="https://github.com/its4nik/dockstat" target="_blank">
+                github
+            </a>
         </div>
     </div>
     <app-status-card />
@@ -19,4 +19,24 @@
     <code>
         {{code}}
     </code>
+</app-dialog>
+
+<app-dialog [state]="settingDialogState()">
+    <div class="container">
+        <div class="title">
+            Settings
+        </div>
+        <div class="settings">
+            <div class="label">
+                Select Theme
+            </div>
+            <select name="theme">
+                @for(theme of themes; track $index){
+                <option [value]="theme">
+                    {{theme}}
+                </option>
+                }
+            </select>
+        </div>
+    </div>
 </app-dialog>
