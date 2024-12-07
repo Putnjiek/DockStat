@@ -34,7 +34,79 @@ export class AppComponent {
     }]
   })
 
-  code = "diggaaahhhh hab doch keine ahnung was da rein muss";
+  code = `
+mintimeout: 10000 # The minimum time to wait before querying the same server again, defaults to 5000 Ms
+
+log:
+  logsize: 10 # Specify the Size of the log files in MB, default is 1MB
+  LogCount: 1 # How many log files should be kept in rotation. Default is 5
+
+tags:
+  public: yellow-200
+  private: stone-950
+  databank: cyan-900
+  important: red-900
+  unused: gray-600
+
+hosts:
+  Fin-1:
+    url: 10.0.0.2
+    port: 2375
+
+container:
+  outline: # Container name
+    link: https://github.com
+    icon: SI:outline
+    tags: public
+
+  dockstat-demo:
+    link: http://dockstatdemo.hetzner.itsnik.de/
+    tags: public
+
+  dockstatapi-demo:
+    link: https://dockstatapidemo.hetzner.itsnik.de/stats
+    tags: public
+
+  postgres:
+    icon: SI:postgresql
+    tags: databank
+
+  redis:
+    icon: SI:redis
+    tags: databank
+
+  docker-proxy-fin-1:
+    icon: SI:docker
+    tags: proxy
+
+  NginxProxyManager:
+    icon: SI:nginxproxymanager
+    link: http://localhost:81
+
+  freshrss:
+    icon: SI:rss
+    link: http://localhost:9891
+    tags: unused
+
+  truecommand:
+    icon: SI:truenas
+    link: http://localhost:9999
+    tags: unused
+
+  scarlett-media:
+    icon: SI:apache
+    link: http://scarlett.itsnik.de
+    tags: unused
+
+  openspeedtest:
+    icon: SI:speedtest
+    link: https://speed.hetzner.itsnik.de
+    tags: public
+
+  ntfy:
+    icon: SI:ntfy
+    tags: unused
+`;
 
   themes: Theme[] = Object.values(Theme);
 

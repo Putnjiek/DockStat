@@ -20,9 +20,11 @@
 </div>
 
 <app-dialog [state]="codeDialogState()">
-    <code>
-        {{code}}
-    </code>
+    <pre class="code">
+        <code>
+            {{code}}
+        </code>
+    </pre>
 </app-dialog>
 
 <app-dialog [state]="settingDialogState()" title="Settings">
