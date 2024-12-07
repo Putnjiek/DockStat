@@ -9,7 +9,6 @@ import { ApiService } from './services/api.service';
 import { StatusCardComponent } from './components/status-card/status-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './components/dialog/dialog.component';
-import { FormsModule } from '@angular/forms';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 
@@ -25,8 +24,7 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    FormsModule
+    BrowserAnimationsModule
   ],
   providers: [
     ApiService // Register ApiService as a provider
