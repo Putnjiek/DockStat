@@ -12,18 +12,38 @@
         </div>
         @if(serverStatus().cpuCores && serverStatus() !== undefined){
         <div class="server-status">
+            <!-- <div class="status"> -->
             <span>
-                Available Memory: {{serverStatus().availableMemory}} GB
+                Available Memory:
             </span>
+            <div class="status-value">
+                {{serverStatus().availableMemory}} GB
+            </div>
+            <!-- </div> -->
+            <!-- <div class="status"> -->
             <span>
-                CPU Cores: {{serverStatus().cpuCores}}
+                CPU Cores:
             </span>
+            <div class="status-value">
+                {{serverStatus().cpuCores}}
+            </div>
+            <!-- </div> -->
+            <!-- <div class="status"> -->
             <span>
-                Memory Usage: {{serverStatus().memoryUsage}} %
+                Memory Usage:
             </span>
+            <div class="status-value">
+                {{serverStatus().memoryUsage}} %
+            </div>
+            <!-- </div> -->
+            <!-- <div class="status"> -->
             <span>
-                CPU Usage: {{serverStatus().memoryUsage}} %
+                CPU Usage:
             </span>
+            <div class="status-value">
+                {{serverStatus().memoryUsage}} %
+            </div>
+            <!-- </div> -->
         </div>
         }
     </div>
