@@ -22,10 +22,9 @@
     --default-padding-small: 2px;
     --default-padding-medium: 5px;
     --default-padding-large: 8px;
-    --default-padding-xlarge: 10px;
+    --default-padding-xlarge: 12px;
     --default-padding-xxlarge: 1rem;
 
-    --default-border-radius: .5rem;
 
     //font
     --default-font: sans-serif;
@@ -40,6 +39,13 @@
 
     --github-logo-background: var(--title-color);
     --github-logo-hover-background: var(--accordion-sever-status-color);
+
+    //border
+    --default-border-radius: .5rem;
+
+    //dropdown
+    --dropdown-border: 1px solid var(--border-color);
+    --dropdown-option-hover-background: #545f75;
 }
 
 * {

@@ -10,6 +10,7 @@ import { StatusCardComponent } from './components/status-card/status-card.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { FormsModule } from '@angular/forms';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     AccordionComponent,
     StatusCardComponent,
-    DialogComponent
+    DialogComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

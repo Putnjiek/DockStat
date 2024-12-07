@@ -21,4 +21,6 @@ export class DialogComponent {
 
   state = input.required<DialogState>();
 
+  title = input("");
+
 }

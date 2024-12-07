@@ -38,4 +38,9 @@
             }
         }
     }
+
+    .settings {
+        display: grid;
+        gap: var(--default-padding-large);
+    }
 }

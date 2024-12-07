@@ -37,20 +37,21 @@ export class AppComponent {
 
   code = "diggaaahhhh hab doch keine ahnung was da rein muss";
 
-  themes: Theme[] = [Theme.Amoled, Theme.Business, Theme.Dracula, Theme.Forest, Theme.Light, Theme.Night, Theme.Nord, Theme.Pastel, Theme.Sunset, Theme.Cyberpunk];
+  themes: Theme[] = Object.values(Theme);
 
   theme = signal<Theme>(Theme.Dracula)
 
   constructor(private authService: AuthService) {
     // this.authService.enable("test");
 
-    const localTheme = localStorage.getItem("theme") as Theme;
-    this.theme.set(localStorage.getItem("theme")?.length ? localStorage.getItem("theme") as Theme : Theme.Dracula);
-    console.log(this.theme(), localTheme);
+    this.theme.set(Object.values(Theme).find(theme => theme === localStorage.getItem("theme")) ? localStorage.getItem("theme") as Theme : Theme.Dracula);
 
     this.onThemeSelection();
   }
 
+  /**
+   * Updates the localStorage and updates the current theme
+   */
   onThemeSelection() {
     document.body.setAttribute("data-theme", this.theme())
     localStorage.setItem("theme", this.theme())

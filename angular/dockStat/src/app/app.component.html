@@ -25,22 +25,13 @@
     </code>
 </app-dialog>
 
-<app-dialog [state]="settingDialogState()">
+<app-dialog [state]="settingDialogState()" title="Settings">
     <div class="container">
-        <div class="title">
-            Settings
-        </div>
         <div class="settings">
             <div class="label">
                 Select Theme
             </div>
-            <select [(ngModel)]="theme" (change)="onThemeSelection()">
-                @for(theme of themes; track $index){
-                <option [value]="theme">
-                    {{theme}}
-                </option>
-                }
-            </select>
+            <app-dropdown [items]="themes" [(selectedItem)]="theme" (selectedItemChange)="onThemeSelection()" />
         </div>
     </div>
 </app-dialog>

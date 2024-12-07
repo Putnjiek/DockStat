@@ -1,6 +1,10 @@
 @if(state().open){
 <div class="container">
     <div class="dialog">
+        <div class="dialog-title">
+            {{title()}}
+        </div>
+
         <div class="content">
             <ng-content />
         </div>

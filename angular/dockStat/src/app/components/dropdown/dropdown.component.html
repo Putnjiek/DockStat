@@ -1,0 +1,17 @@
+<div class="dropdown" (click)="isOptionOpen.set(!isOptionOpen())">
+    <div class="showroom" [(ngModel)]="selectedItem">
+        {{selectedItem()}}
+    </div>
+    <div class="icon">
+        <i class="fa-solid fa-caret-down"></i>
+    </div>
+</div>
+@if(isOptionOpen()){
+<div class="option" (click)="isOptionOpen.set(false)">
+    @for(theme of items(); track $index){
+    <div class="dropdown-value" (click)="selectedItem.set(theme)">
+        {{theme}}
+    </div>
+    }
+</div>
+}
