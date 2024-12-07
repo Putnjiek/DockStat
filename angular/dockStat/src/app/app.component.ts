@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { ServerStatus } from './interfaces/serverStatus';
-import { AuthService } from './services/auth.service';
 import { DialogState } from './components/dialog/dialog.component';
 import { Theme } from './enums/theme';
 
@@ -41,9 +40,7 @@ export class AppComponent {
 
   theme = signal<Theme>(Theme.Dracula)
 
-  constructor(private authService: AuthService) {
-    // this.authService.enable("test");
-
+  constructor() {
     this.theme.set(Object.values(Theme).find(theme => theme === localStorage.getItem("theme")) ? localStorage.getItem("theme") as Theme : Theme.Dracula);
 
     this.onThemeSelection();
@@ -53,7 +50,7 @@ export class AppComponent {
    * Updates the localStorage and updates the current theme
    */
   onThemeSelection() {
-    document.body.setAttribute("data-theme", this.theme())
-    localStorage.setItem("theme", this.theme())
+    document.body.setAttribute("data-theme", this.theme());
+    localStorage.setItem("theme", this.theme());
   }
 }

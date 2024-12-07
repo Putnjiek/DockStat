@@ -15,8 +15,10 @@
     --shadow: 0 4px 6px -1px #0000001a;
     --shadow-offset: 0 18px 10px 4px #0000001a;
 
-    --upload-download-color: #40e0d0;
-    --cpu-ram-color: #ff7ac6;
+    --upload-color: #40e0d0;
+    --download-color: #40e0d0;
+    --cpu-color: #ff7ac6;
+    --ram-color: #ff7ac6;
 
     //padding
     --default-padding-small: 2px;
@@ -152,12 +154,20 @@ body {
 
 //icon color for container
 
-.container-upload-download-color {
-    color: var(--upload-download-color);
+.container-upload-color {
+    color: var(--upload-color);
 }
 
-.container-cpu-ram-color {
-    color: var(--cpu-ram-color)
+.container-download-color {
+    color: var(--download-color)
+}
+
+.container-cpu-color {
+    color: var(--cpu-color)
+}
+
+.container-ram-color {
+    color: var(--ram-color)
 }
 
 .button {

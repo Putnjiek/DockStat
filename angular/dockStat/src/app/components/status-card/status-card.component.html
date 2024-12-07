@@ -13,26 +13,26 @@
                     </div>
                     <div class="card-container">
                         <div class="icon">
-                            <i class="fa-solid fa-microchip container-cpu-ram-color"></i>
+                            <i class="fa-solid fa-microchip container-cpu-color"></i>
                         </div>
                         {{container.cpu_usage}}%
                     </div>
                     <div class="card-container">
                         <div class="icon">
-                            <i class="fa-solid fa-memory container-cpu-ram-color"></i>
+                            <i class="fa-solid fa-memory container-ram-color"></i>
                         </div>
                         {{container.mem_usage}} GB / {{container.mem_limit}} GB
                     </div>
                     <div class="card-container">
                         <div class="icon">
-                            <i class="fa-solid fa-arrow-up container-upload-download-color"
+                            <i class="fa-solid fa-arrow-up container-upload-color"
                                 [class.pulse]="container.current_net_rx > 0"></i>
                         </div>
                         {{container.current_net_rx}} MB/s
                     </div>
                     <div class="card-container">
                         <div class="icon">
-                            <i class="fa-solid fa-arrow-down container-upload-download-color"
+                            <i class="fa-solid fa-arrow-down container-download-color"
                                 [class.pulse]="container.current_net_tx > 0"></i>
                         </div>
                         {{container.current_net_tx}} MB/s
