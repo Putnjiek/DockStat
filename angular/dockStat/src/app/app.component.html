@@ -20,11 +20,7 @@
 </div>
 
 <app-dialog [state]="codeDialogState()">
-    <pre class="code">
-        <code>
-            {{code}}
-        </code>
-    </pre>
+    <pre class="code-block" [innerHTML]="highlightYaml(code)"></pre>
 </app-dialog>
 
 <app-dialog [state]="settingDialogState()" title="Settings">

@@ -208,14 +208,28 @@ body {
     width: 400px;
 }
 
-.code {
+.code-block {
     background-color: #1e1e1e;
     color: #d4d4d4;
-    padding: 10px;
-    padding-top: 0px;
-    border-radius: 5px;
-    overflow: auto;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Courier New', monospace;
     font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-x: auto;
+
+    .key {
+        color: #569cd6;
+        font-weight: bold;
+    }
+
+    .value {
+        color: #ce9178;
+    }
+
+    .comment {
+        color: #6a9955;
+        font-style: italic;
+    }
 }

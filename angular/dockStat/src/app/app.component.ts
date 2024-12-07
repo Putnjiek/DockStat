@@ -125,4 +125,15 @@ container:
     document.body.setAttribute("data-theme", this.theme());
     localStorage.setItem("theme", this.theme());
   }
+
+  highlightYaml(yaml: string): string {
+    let highlightedYaml = yaml.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
+
+    highlightedYaml = highlightedYaml
+      .replace(/(^|\s)([a-zA-Z0-9_-]+)(?=:)/g, '$1<span class="key">$2</span>') // Highlight keys
+      .replace(/:\s([a-zA-Z0-9._/-]+)(?=\s|$)/g, ': <span class="value">$1</span>') // Highlight values
+      .replace(/#(.*)$/gm, '<span class="comment">#$1</span>'); // Highlight comments
+
+    return highlightedYaml;
+  }
 }
