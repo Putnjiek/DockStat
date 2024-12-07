@@ -25,7 +25,7 @@ export class StatusCardComponent implements OnDestroy {
   constructor(private containerService: ContainerService) {
     this.containerService.getAll();
     this.subscription.add(this.containerService.allContainers$.subscribe(allContainers => {
-      // this.containers.set(allContainers)
+      // this.containers.set(allContainers);
     }))
   }
 
