@@ -23,7 +23,7 @@ export class StatusCardComponent implements OnDestroy {
   subscription = new Subscription();
 
   constructor(private containerService: ContainerService) {
-    // this.getAllContainer();
+    this.containerService.getAll();
     this.subscription.add(this.containerService.allContainers$.subscribe(allContainers => {
       // this.containers.set(allContainers)
     }))
@@ -31,10 +31,5 @@ export class StatusCardComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-  }
-
-  async getAllContainer() {
-    const containers = await this.containerService.getAll();
-    this.containers.set(containers);
   }
 }
